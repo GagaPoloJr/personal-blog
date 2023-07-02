@@ -1,0 +1,43 @@
+---
+export type Props = {
+  pageSlug: string
+  pageTtile: string
+}
+
+const { pageSlug, pageTtile } = Astro.props
+---
+
+<div class="max-w-2zl mx-auto">
+  <nav class="border-gray-200 px-2 mb-10">
+    <!-- <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <div class="flex">
+                <div class="relative mr-3 md:mr-0 hidden md:block"></div>
+            </div>
+        </div> -->
+    <div class="hidden md:flex justify-between items-center w-full md:w-auto md:order-1" id="mobile-menu-3">
+      <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+        <li>
+          <a
+            href="#"
+            class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded"
+            aria-current="page">Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0"
+            >Services</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
