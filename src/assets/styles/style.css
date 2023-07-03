@@ -1,12 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 
 :root {
-    --light-blue: #E5F5F4;
-    --light-green: #BCEEEB;
-    --light-yellow: #F4FED8;
-
+  --light-blue: #e5f5f4;
+  --light-green: #bceeeb;
+  --light-yellow: #f4fed8;
 }
 
-body{
-    font-family: 'Montserrat', sans-serif;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(229, 245, 244);
+  background: linear-gradient(180deg, rgba(229, 245, 244, 1) 0%, rgba(188, 238, 235, 1) 76%, rgba(244, 254, 216, 1) 100%);
+  @apply h-screen;
+}
+
+.navbar-glass {
+  @apply bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-100 h-full;
+}
+
+.ornament{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.ornament-circle-style-1{
+    border-radius: 50%;
+    height: 1231px;
+    width:1231px;
+    @apply bg-gradient-to-bl from-pink-500 to-violet-600 backdrop-filter backdrop-blur-lg bg-opacity-40;
 }

@@ -4,6 +4,16 @@ module.exports = {
   theme: {
     extend: {}
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    {
+      'postcss-import': {},
+      'tailwindcss/nesting': 'postcss-nesting',
+      autoprefixer: {},
+      'postcss-preset-env': {
+        features: { 'nesting-rules': false },
+      },
+    }
+  ],
   darkMode: 'class'
 }

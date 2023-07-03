@@ -5,7 +5,6 @@ export interface Props {
 }
 
 const { title } = Astro.props
-
 import Navbar from '../components/Header/Navbar.astro';
 
 ---
@@ -22,7 +21,9 @@ import Navbar from '../components/Header/Navbar.astro';
 	</head>
 	<body>
 	<Navbar pageTtile='test' pageSlug='test'/>
+	<div class="ornament-circle-style-1 ornament">
 
+	</div>
 		<slot />
 	</body>
 </html>
