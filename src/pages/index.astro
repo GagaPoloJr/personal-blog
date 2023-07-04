@@ -1,11 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+  <main>
+    <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -31,51 +31,150 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
-		</ul>
-	</main>
+		</ul> -->
+    <div class="flex items-center justify-center flex-col">
+      <div class="tracking-wider">
+        <span class="text-xl font-extrabold"> Hi 🧞‍♀️</span>
+        <span class="text-xl"> I’m Software Developer</span>
+      </div>
+      <h1 class="text-5xl font-extrabold text-black mb-10">
+        M. Haikal Rahmadi
+      </h1>
+      <button
+        class="text-sm px-6 py-2 text-white rounded-full bg-gradient-to-tr from-violet-300 to-pink-400"
+        >Read More</button
+      >
+    </div>
+    <div class="w-full flex flex-col gap-10">
+      <!-- Start of while loop -->
+
+      <div
+        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
+      >
+        <div class="flex justify-center items-center gap-24">
+          <h3 class="text-xl font-bold">Design</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis vitae, corrupti modi tempore repellendus fuga
+            dignissimos quisquam minus quam in.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
+      >
+        <div class="flex justify-center items-center gap-24">
+          <h3 class="text-xl font-bold">Design</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis vitae, corrupti modi tempore repellendus fuga
+            dignissimos quisquam minus quam in.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
+      >
+        <div class="flex justify-center items-center gap-24">
+          <h3 class="text-xl font-bold">Design</h3>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis vitae, corrupti modi tempore repellendus fuga
+            dignissimos quisquam minus quam in.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-2 mt-32">
+      <div
+        class="flex flex-col py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100"
+      >
+        <h3 class="text-lg font-bold">Interactive navigation bar component</h3>
+        <p class="text-sm font-light leading-6">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+          repellat magnam soluta commodi perspiciatis dolores excepturi,
+          consequuntur maxime? Vero illum numquam minima aut quia explicabo vel
+          exercitationem magni unde. Earum?
+        </p>
+      </div>
+      <div
+        class="flex flex-col py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100"
+      >
+        <h3 class="text-lg font-bold">Interactive navigation bar component</h3>
+        <p class="text-sm font-light leading-6">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+          repellat magnam soluta commodi perspiciatis dolores excepturi,
+          consequuntur maxime? Vero illum numquam minima aut quia explicabo vel
+          exercitationem magni unde. Earum?
+        </p>
+      </div>
+      <div
+        class="flex flex-col py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100"
+      >
+        <h3 class="text-lg font-bold">Interactive navigation bar component</h3>
+        <p class="text-sm font-light leading-6">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+          repellat magnam soluta commodi perspiciatis dolores excepturi,
+          consequuntur maxime? Vero illum numquam minima aut quia explicabo vel
+          exercitationem magni unde. Earum?
+        </p>
+      </div>
+      <div
+        class="flex flex-col py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100"
+      >
+        <h3 class="text-lg font-bold">Interactive navigation bar component</h3>
+        <p class="text-sm font-light leading-6">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+          repellat magnam soluta commodi perspiciatis dolores excepturi,
+          consequuntur maxime? Vero illum numquam minima aut quia explicabo vel
+          exercitationem magni unde. Earum?
+        </p>
+      </div>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 80ch;
+  }
+
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+  
 </style>

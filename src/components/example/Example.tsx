@@ -7,4 +7,4 @@ const Example = ({ title, subtitle }: { title: string; subtitle: string }) => {
   )
 }
 
-export default Example
+export default Example;
