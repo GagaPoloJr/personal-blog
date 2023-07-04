@@ -1,0 +1,33 @@
+---
+const cardBlogSingle = [
+  {
+    title: "Design",
+    description:
+      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+  },
+  {
+    title: "Design",
+    description:
+      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+  },
+  {
+    title: "Design",
+    description:
+      "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+  },
+];
+---
+
+<div class="w-full flex flex-col gap-10">
+  <!-- Start of while loop -->
+  {
+    cardBlogSingle.map(({ title, description }) => (
+      <div class="flex w-full h-full py-8 md:py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100">
+        <div class="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-24">
+          <h3 class="text-xl font-bold"> {title} </h3>
+          <p class="text-sm"> {description} </p>
+        </div>
+      </div>
+    ))
+  }
+</div>

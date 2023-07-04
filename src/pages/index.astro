@@ -1,86 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import CardBlog from '../components/cards/CardBlog.astro'
+import Layout from "../layouts/Layout.astro";
+import CardBlog from "../components/cards/CardBlog.astro";
+import Header from "../components/Header/Header.astro";
+import CardSingle from "../components/cards/CardSingle.astro";
 ---
 
 <Layout title="M. Haikal Rahmadi - Software Developer">
   <main>
-    <!-- <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul> -->
-    <div class="flex items-center justify-center flex-col">
-      <div class="tracking-wider">
-        <span class="text-xl font-extrabold"> Hi 🧞‍♀️</span>
-        <span class="text-xl"> I’m Software Developer</span>
+    <div class="mt-20">
+      <Header />
+      <div class="mt-16">
+        <CardSingle />
       </div>
-      <h1 class="text-5xl font-extrabold text-black mb-10">M. Haikal Rahmadi</h1>
-      <button class="text-sm px-6 py-2 text-white rounded-full bg-gradient-to-tr from-violet-300 to-pink-400">Read More</button>
-    </div>
-    <div class="w-full flex flex-col gap-10">
-      <!-- Start of while loop -->
-
-      <div
-        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
-      >
-        <div class="flex justify-center items-center gap-24">
-          <h3 class="text-xl font-bold">Design</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos
-            quisquam minus quam in.
-          </p>
+      <div class="header-info mt-32">
+        <div class="flex justify-between mb-3 items-center">
+          <h4 class="font-bold text-2xl">Blog</h4>
+          <a class="text-sm font-medium" href="">See More</a>
         </div>
-      </div>
-
-      <div
-        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
-      >
-        <div class="flex justify-center items-center gap-24">
-          <h3 class="text-xl font-bold">Design</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos
-            quisquam minus quam in.
-          </p>
-        </div>
-      </div>
-
-      <div
-        class="flex w-full h-full py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
-      >
-        <div class="flex justify-center items-center gap-24">
-          <h3 class="text-xl font-bold">Design</h3>
-          <p class="text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos
-            quisquam minus quam in.
-          </p>
-        </div>
+        <CardBlog />
       </div>
     </div>
-
-    <CardBlog />
   </main>
 </Layout>
 

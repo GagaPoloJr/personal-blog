@@ -1,35 +1,44 @@
 ---
 const blogList = [
   {
-    title: 'Interactive navigation bar component',
+    title: "Interactive navigation bar component",
     description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?'
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?",
   },
   {
-    title: 'Cara ternak kambing gagal 100%',
+    title: "Cara ternak kambing gagal 100%",
     description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?'
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?",
   },
   {
-    title: 'Apakah semua manusia dimuka bumi ini bingung??',
+    title: "Apakah semua manusia dimuka bumi ini bingung??",
     description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?'
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?",
   },
   {
-    title: 'Day 1 working as a Software Developer',
+    title: "Day 1 working as a Software Developer",
     description:
-      ' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?'
-  }
-]
+      " Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe repellat magnam soluta commodi perspiciatis dolores excepturi, consequuntur maxime? Vero illum numquam minima aut quia explicabo vel exercitationem magni unde. Earum?",
+  },
+];
+import { Icon } from "astro-icon";
+import { textFormatter } from "../../utils/helper";
 ---
 
-<article class="w-full grid grid-cols-1 sm:grid-cols-2 gap-2 mt-32">
+<article class="w-full grid grid-cols-1 sm:grid-cols-2 gap-2">
   {
     blogList.map(({ title, description }) => (
       <div class="flex flex-col py-5 justify-between gap-5 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-        <h3 class="text-lg font-bold"> {title}</h3>
+        <h3 class="text-lg font-bold text-purple-500">
+          {textFormatter(title, 6)}
+        </h3>
         <p class="text-sm font-light leading-6">{description} </p>
-        <a href="">Read More</a>
+        <a class="text-sm font-bold hover:font-extrabold flex items-center gap-1 hover:transition-all  transition delay-150  ease-in-out" href="">
+          Read More
+          <span>
+            <Icon pack="mdi" name="arrow-right" size={14} />
+          </span>
+        </a>
       </div>
     ))
   }

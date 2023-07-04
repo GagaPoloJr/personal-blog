@@ -22,5 +22,6 @@
         "activityBar.background": "#422435",
         "titleBar.activeBackground": "#5D324A",
         "titleBar.activeForeground": "#FCF9FB"
-    }
+    },
+    "nuxt.isNuxtApp": false
 }
