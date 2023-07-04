@@ -1,11 +1,13 @@
 ---
-import "../assets/styles/style.css";
+import '../assets/styles/style.css'
+import Ornament from '../components/Ornament'
 export interface Props {
-  title: string;
+  title: string
 }
 
-const { title } = Astro.props;
-import Navbar from "../components/Header/Navbar.astro";
+const { title } = Astro.props
+
+import Navbar from '../components/Header/Navbar.astro'
 ---
 
 <!DOCTYPE html>
@@ -19,9 +21,10 @@ import Navbar from "../components/Header/Navbar.astro";
     <title>{title}</title>
   </head>
   <body>
-    <div class="ornament-circle-style-1 ornament"></div>
-    <div class="ornament-circle-style-2 ornament"></div>
-	<div class="overlay"></div>
+    <Ornament client:load className="ornament-circle-style-1" />
+    <Ornament client:load className="ornament-circle-style-2" />
+
+    <div class="overlay"></div>
     <div class="main-section">
       <Navbar pageTtile="test" pageSlug="test" />
       <slot />
@@ -31,20 +34,14 @@ import Navbar from "../components/Header/Navbar.astro";
 <style is:global>
   :root {
     --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
+    --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
   }
   html {
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
   }
   code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 
   /* .navbar-nav{

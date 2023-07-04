@@ -54,6 +54,7 @@ button{
   height: 700px;
   width: 700px;
   @apply bg-gradient-to-bl from-pink-400 to-violet-500 blur-2xl;
+  /* animation: bounce 500s infinite; */
 }
 .ornament-circle-style-2 {
   top: -100px;
@@ -62,4 +63,14 @@ button{
   height: 700px;
   width: 700px;
   @apply bg-gradient-to-bl from-orange-400 to-lime-100 blur-2xl;
+  
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(calc(100vw - 100px));
+  }
 }
