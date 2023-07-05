@@ -1,14 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import CardBlog from "../components/cards/CardBlog.astro";
-import Header from "../components/Header/Header.astro";
+import Header from "../components/Header/Header";
 import CardSingle from "../components/cards/CardSingle.astro";
 ---
 
 <Layout title="M. Haikal Rahmadi - Software Developer">
   <main>
     <div class="mt-20">
-      <Header />
+      <Header client:load />
       <div class="mt-16">
         <CardSingle />
       </div>
