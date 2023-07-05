@@ -31,16 +31,17 @@ button {
   font-size: unset;
 }
 
-.main-section {
+.main-section > * {
   position: relative;
   z-index: 3;
 }
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  @apply h-auto w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40;
+  /* @apply h-full w-full bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40; */
+  @apply h-full w-full bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10;
 }
 .navbar-glass {
   @apply fixed  bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 border border-gray-100 top-0 left-0 transition duration-300 ease-in-out;
@@ -62,6 +63,10 @@ button {
   z-index: 1;
 }
 
+.bubble{
+  z-index: 1;
+}
+
 .ornament-circle-style-1 {
   top: -300px;
   left: -300px;
@@ -77,6 +82,7 @@ button {
   border-radius: 50%;
   height: 700px;
   width: 700px;
+  max-width: 100%;
   @apply bg-gradient-to-bl from-orange-400 to-lime-100 blur-2xl;
 }
 
