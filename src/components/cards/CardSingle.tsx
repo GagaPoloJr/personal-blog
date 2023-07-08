@@ -90,6 +90,7 @@ const CardSingle = () => {
             direction: "ttb",
             height: "200px", // Set a fixed height for the slider
             autoplaySpeed: 500,
+            releaseWheel: true,
           }}
           className="w-full flex flex-col gap-10"
         >
