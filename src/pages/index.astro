@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import CardBlog from "../components/cards/CardBlog.astro";
 import Header from "../components/Header/Header";
-import CardSingle from "../components/cards/CardSingle.astro";
+import CardSingle from "../components/cards/CardSingle";
 ---
 
 <Layout title="M. Haikal Rahmadi - Software Developer">
@@ -10,7 +10,7 @@ import CardSingle from "../components/cards/CardSingle.astro";
     <div class="mt-20">
       <Header client:load />
       <div class="mt-16">
-        <CardSingle />
+        <CardSingle client:only />
       </div>
       <div class="header-info mt-32">
         <div class="flex justify-between mb-3 items-center">

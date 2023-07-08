@@ -19,15 +19,11 @@ const BubbleAnimation = () => {
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
+   
+    handleResize()
     animateBubble(); //call the effect
 
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+   
   }, []); // to run the effect only once
 
   const generateRandomPosition = () => {
