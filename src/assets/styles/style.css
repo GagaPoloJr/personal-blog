@@ -70,22 +70,22 @@ button {
 }
 
 .ornament-circle-style-1 {
-  top: -300px;
+  /* top: -300px;
   left: -300px;
   border-radius: 50%;
   height: 700px;
-  width: 700px;
-  @apply bg-gradient-to-bl from-pink-400 to-violet-500 blur-2xl;
+  width: 700px; */
+  @apply rounded-full h-[700px] w-[700px] max-w-full top-[-300px] left-[-250px] md:left-[-300px] bg-gradient-to-bl from-pink-400 to-violet-500 blur-2xl;
   /* animation: bounce 500s infinite; */
 }
 .ornament-circle-style-2 {
-  top: -100px;
+  /* top: -100px;
   right: -250px;
   border-radius: 50%;
   height: 700px;
   width: 700px;
-  max-width: 100%;
-  @apply bg-gradient-to-bl from-orange-400 to-lime-100 blur-2xl;
+  max-width: 100%; */
+  @apply rounded-full h-[300px] md:h-[700px] w-[300px] md:w-[700px] max-w-full top-[-100px] right-[0] md:right-[-250px] bg-gradient-to-bl from-orange-400 to-lime-100 blur-2xl;
 }
 
 @keyframes bounce {
