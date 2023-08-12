@@ -5,10 +5,7 @@ import Ornament from "../components/Ornament";
 export interface Props {
   title: string;
 }
-
 const { title } = Astro.props;
-
-import Navbar from "../components/Header/Navbar.astro";
 ---
 
 <!DOCTYPE html>
@@ -26,7 +23,6 @@ import Navbar from "../components/Header/Navbar.astro";
     <Ornament client:load className="ornament-circle-style-2" />
     <div class="main-section">
       <div class="overlay"></div>
-      <Navbar pageTtile="test" pageSlug="test" />
       <slot />
     </div>
   </body>

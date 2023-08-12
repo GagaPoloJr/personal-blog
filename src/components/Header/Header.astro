@@ -1,27 +1,20 @@
 ---
 import SocialMedia from "../SocialMedia.astro";
-import { Icon } from "astro-icon";
+// import { Icon } from "astro-icon";
+import ButtonModal from "../button/ButtonModal";
 ---
 
 <div class="flex items-center justify-center flex-col">
   <div class="tracking-wider text-center">
     <span class="text-md md:text-xl font-extrabold">Hi 🧞‍♀️</span>
-    <span class="text-md md:text-xl"> I’m Writer in Different Styles</span>
+    <span class="text-md md:text-xl"> I’m a Writer in Different Styles</span>
   </div>
   <h1 class="text-2xl md:text-5xl font-extrabold text-black text-center mb-7">
     M. Haikal Rahmadi
   </h1>
   <SocialMedia />
-  <button
-    class="button-read text-sm px-6 py-2 font-bold text-white rounded-full bg-gradient-to-tr from-violet-300 to-pink-400 hover:opacity-75 transition-all duration-300"
-  >
-    <span class="flex items-center gap-1">
-      Read More
-      <span class="icon">
-        <Icon pack="mdi" name="arrow-right" size={14}  />
-      </span>
-    </span>
-  </button>
+
+  <ButtonModal client:load />
 </div>
 
 <style>
@@ -33,6 +26,5 @@ import { Icon } from "astro-icon";
     opacity: 0;
     margin-left: -20px;
     transition: all 300ms;
-
   }
 </style>

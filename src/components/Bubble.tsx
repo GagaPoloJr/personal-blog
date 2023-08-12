@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 
 const BubbleAnimation = () => {
   const animationControls = useAnimation();
@@ -19,11 +19,9 @@ const BubbleAnimation = () => {
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
-   
-    handleResize()
-    animateBubble(); //call the effect
 
-   
+    handleResize();
+    animateBubble(); //call the effect
   }, []); // to run the effect only once
 
   const generateRandomPosition = () => {
@@ -50,15 +48,15 @@ const BubbleAnimation = () => {
 
   return (
     <>
-      {[...Array(10)].map((_, index) => (
+      {[...Array(5)].map((_, index) => (
         <motion.div
           className="bubble"
           key={index}
           style={{
             width: 50,
             height: 50,
-            borderRadius: "50%",
-            position: "absolute",
+            borderRadius: '50%',
+            position: 'absolute',
             background: `linear-gradient(to bottom right, ${generateRandomColor()}, ${generateRandomColor()})`,
             ...generateRandomPosition(),
           }}
