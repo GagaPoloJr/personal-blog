@@ -1,57 +1,47 @@
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-// Default theme
-import "@splidejs/react-splide/css";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@assets/styles/splide.css.js';
 
-// or other themes
-import "@splidejs/react-splide/css/skyblue";
-import "@splidejs/react-splide/css/sea-green";
+import {
+  aeIcon,
+  tailwindIcon,
+  jsIcon,
+  htmlIcon,
+  cssIcon,
+  phpIcon,
+  tsIcon,
+  reactIcon,
+  vueIcon,
+  nuxtIcon,
+  laravelIcon,
+  sassIcon,
+  codeIgIcon,
+  bs4Icon,
+  xdIcon,
+  figmaIcon,
+  psIcon,
+  premierIcon,
+} from '@components/icons/Icons';
 
-// or only core styles
-import "@splidejs/react-splide/css/core";
-
-import jsIcon from "../../../public/icon/js.svg";
-import htmlIcon from "../../../public/icon/html.svg";
-import cssIcon from "../../../public/icon/css.svg";
-import phpIcon from "../../../public/icon/php.svg";
-import tsIcon from "../../../public/icon/ts.svg";
-
-import reactIcon from "../../../public/icon/react.svg";
-import vueIcon from "../../../public/icon/vue.svg";
-import nuxtIcon from "../../../public/icon/nuxt.svg";
-import laravelIcon from "../../../public/icon/laravel.svg";
-import sassIcon from "../../../public/icon/sass.svg";
-import codeIgIcon from "../../../public/icon/ci.svg";
-
-import tailwindIcon from "../../../public/icon/tailwind.svg";
-import bs4Icon from "../../../public/icon/b4.svg";
-
-import xdIcon from "../../../public/icon/xd.svg";
-import figmaIcon from "../../../public/icon/figma.svg";
-import psIcon from "../../../public/icon/ps.svg";
-
-import aeIcon from "../../../public/icon/ae.svg";
-import premierIcon from "../../../public/icon/premier.svg";
-import { useEffect, useState } from "react";
 const CardSingle = () => {
   const cardBlogSingle = [
     {
-      title: "Graphic Design & Video",
+      title: 'Graphic Design & Video',
       description:
-        "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [xdIcon, figmaIcon, psIcon, premierIcon, aeIcon],
       order: 3,
     },
     {
-      title: "languages & its counterparts",
+      title: 'languages & tools',
       description:
-        "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [htmlIcon, cssIcon, jsIcon, tsIcon, phpIcon],
       order: 2,
     },
     {
-      title: "Framework & libraries",
+      title: 'Framework & tools',
       description:
-        "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.",
+        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [
         vueIcon,
         nuxtIcon,
@@ -66,13 +56,11 @@ const CardSingle = () => {
     },
   ];
 
-  const sortedCardBlogSingle = [...cardBlogSingle].sort(
-    (a, b) => a.order - b.order
-  );
+  const sortedCardBlogSingle = [...cardBlogSingle].sort((a, b) => a.order - b.order);
 
   const getDynamicStyle = (order: number) => {
     if (order === 1) {
-      return { paddingTop: "2.5rem" };
+      return { paddingTop: '2.5rem' };
     }
     return {};
   };
@@ -81,14 +69,14 @@ const CardSingle = () => {
     <>
       <div>
         <Splide
-          style={{ padding: "unset" }}
+          style={{ padding: 'unset' }}
           options={{
             rewind: true,
             arrows: false,
             autoplay: true,
             pagination: false,
-            direction: "ttb",
-            height: "200px", // Set a fixed height for the slider
+            direction: 'ttb',
+            height: '200px', // Set a fixed height for the slider
             autoplaySpeed: 500,
             releaseWheel: true,
           }}
@@ -105,12 +93,7 @@ const CardSingle = () => {
 
                   <div className="flex flex-wrap gap-5 justify-center md:justify-start items-center">
                     {icons.map((icon, index) => (
-                      <img
-                        className="w-8 sm:w-12"
-                        key={index}
-                        src={icon}
-                        alt=""
-                      />
+                      <img className="w-8 sm:w-12" key={index} src={icon} alt="" />
                     ))}
                   </div>
                 </div>

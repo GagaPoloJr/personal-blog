@@ -9,12 +9,12 @@ const { pageSlug, pageTtile } = Astro.props;
 const navigation = [
   {
     title: "Home",
-    url: "home",
+    url: "/",
   },
-  {
-    title: "About",
-    url: "blog",
-  },
+  // {
+  //   title: "About",
+  //   url: "blog",
+  // },
   {
     title: "Blog",
     url: "blog",
@@ -33,7 +33,7 @@ const navigation = [
           navigation.map(({ title, url }) => (
             <li>
               <a
-                href="{url}"
+                href={url}
                 class="hover:text-white text-md font-extrabold block pl-3 md:pl-0 pr-4 py-1 hover:pl-4 p-0 rounded-xl hover:bg-gradient-to-tr hover:from-violet-300 hover:to-pink-400 transition-all duration-250"
                 aria-current="page"
               >
