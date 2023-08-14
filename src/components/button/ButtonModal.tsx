@@ -4,7 +4,11 @@ import ModalAbout from '@components/modals/Modal';
 const ButtonModal = () => {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => {
-    setOpenModal(!openModal);
+    setOpenModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
   };
 
   return (
@@ -16,7 +20,8 @@ const ButtonModal = () => {
       >
         <span className="flex items-center gap-1">Read More</span>
       </button>
-      <ModalAbout isOpen={openModal} setIsOpen={handleOpenModal} />
+
+      <ModalAbout isOpen={openModal} handleCloseModal={handleCloseModal} />
     </>
   );
 };
