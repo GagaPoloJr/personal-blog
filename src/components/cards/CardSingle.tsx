@@ -26,22 +26,16 @@ const CardSingle = () => {
   const cardBlogSingle = [
     {
       title: 'Graphic Design & Video',
-      description:
-        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [xdIcon, figmaIcon, psIcon, premierIcon, aeIcon],
       order: 3,
     },
     {
       title: 'languages & tools',
-      description:
-        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [htmlIcon, cssIcon, jsIcon, tsIcon, phpIcon],
       order: 2,
     },
     {
       title: 'Framework & tools',
-      description:
-        '   Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vitae, corrupti modi tempore repellendus fuga dignissimos quisquam minus quam in.',
       icons: [
         vueIcon,
         nuxtIcon,

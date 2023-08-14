@@ -19,7 +19,6 @@ const BubbleAnimation = () => {
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
-    // console.log(animationControls);
     handleResize();
     animateBubble();
   }, []); // to run the effect only once
