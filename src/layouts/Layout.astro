@@ -1,11 +1,33 @@
 ---
 import '../assets/styles/style.css';
 import Ornament from '../components/Ornament';
-export interface Props {
-  title: string;
+export type Props = {
+  title?: string
+  type?: string
+  description?: string
+  overrideTitle?: boolean
+  canonical?: string
+  date?: string
+  sharingImageUrl?: string
 }
 
-const { title } = Astro.props;
+const { pathname } = Astro.url
+const url = Astro.url.toString()
+const isHome = pathname === '/'
+const baseUrl = 'https://haikalrahmadi.cloud'
+
+
+
+let {
+  title = 'M. Haikal Rahmadi',
+  sharingImageUrl = '/og-image.png',
+  type = 'website',
+  description = "Hi,Haikal here. Welcome to my personal website!",
+ 
+} = Astro.props as Props
+
+
+sharingImageUrl = `${baseUrl}${sharingImageUrl}`
 
 import Navbar from '../components/Header/Navbar.astro';
 import BubbleAnimation from '@components/Bubble';
@@ -19,6 +41,20 @@ import BubbleAnimation from '@components/Bubble';
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={title} />
+    <meta property="og:image" content={sharingImageUrl} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Haikal Rahmadi" />
+    <meta name="twitter:site" content="@haikalrahmadi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="author" content="Haikal Rahmadi" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <!-- <link rel="manifest" href="/site.webmanifest" /> -->
     <title>{title}</title>
   </head>
   <body>
