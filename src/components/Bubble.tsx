@@ -19,14 +19,13 @@ const BubbleAnimation = () => {
     const handleResize = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
-
+    // console.log(animationControls);
     handleResize();
-    animateBubble(); //call the effect
+    animateBubble();
   }, []); // to run the effect only once
 
   const generateRandomPosition = () => {
     const { width, height } = windowSize;
-
     const randomX = Math.random() * (width - 100);
     const randomY = Math.random() * (height - 100);
 
@@ -43,7 +42,7 @@ const BubbleAnimation = () => {
     const randomColorIndex = Math.floor(Math.random() * colors.length);
     const [r, g, b] = colors[randomColorIndex];
 
-    return `rgba(${r}, ${g}, ${b},0.7)`;
+    return `rgba(${r},${g},${b},0.7)`;
   };
 
   return (
