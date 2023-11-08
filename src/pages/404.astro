@@ -6,9 +6,16 @@ import Default from '../layouts/Default.astro';
 
 <Default title="404 Not Found">
   <main style="height: 100vh;" class="main-section flex items-center justify-center h-screen">
-    <div class="overlay"></div>
-    <div class="z-10 relative">
-      <h2 class="text-center"></h2>
+    <!-- <div class="overlay">
+      
+    </div> -->
+    <div class="z-10 relative flex justify-center items-center flex-col gap-5">
+      <h2 class="text-center flex justify-center items-center">
+        <span class="font-bold text-4xl">
+          404 
+          </span> &nbsp;  Not Found
+      </h2>
+      <a class=" text-sm text-center hover:text-purple-500" href="/">Back to homepage</a>
     </div>
   </main>
 </Default>

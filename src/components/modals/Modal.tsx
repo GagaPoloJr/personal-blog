@@ -92,31 +92,35 @@ const ModalAbout = ({ isOpen, handleCloseModal }: modalProps) => {
                     </div>
                     <div className="p-6 space-y-6">
                       <p className="text-sm leading-relaxed dark:text-gray-400">
-                        With less than a month to go before the European Union enacts new consumer
-                        privacy laws for its citizens, companies around the world are updating their
-                        terms of service agreements to comply.
-                      </p>
-                      <p className="text-sm leading-relaxed dark:text-gray-400">
-                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into
-                        effect on May 25 and is meant to ensure a common set of data rights in the
-                        European Union. It requires organizations to notify users as soon as
-                        possible of high-risk data breaches that could personally affect them.
+                        I'm a tech enthusiast who loves bringing websites to life. As a{' '}
+                        <b> Frontend Developer </b>, I take pride in crafting web experiences that
+                        are not only functional but also visually appealing. I'm fluent in the
+                        languages of the web - HTML, CSS, and JavaScript.
+                        <br />
+                        <br />
+                        My job is to transform design ideas into interactive and user-friendly
+                        websites. I'm all about making sure that visitors to these sites have a
+                        smooth and enjoyable journey. I'm dedicated to staying on top of the
+                        ever-changing landscape of web development. It's an exciting journey, and
+                        I'm here to make it as seamless as possible for users. So, whether you're a
+                        fellow developer or someone looking to enhance their online presence, feel
+                        free to connect and let's create something amazing together!
                       </p>
                     </div>
                     <div className="flex items-center p-6 space-x-2 border-gray-200 rounded-b dark:border-gray-600">
-                      <button
+                      {/* <button
                         onClick={handleCloseModal}
                         type="button"
                         className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                       >
                         I accept
-                      </button>
+                      </button> */}
                       <button
                         onClick={handleCloseModal}
                         type="button"
                         className="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
                       >
-                        Decline
+                        Close
                       </button>
                     </div>
                   </div>
