@@ -46,7 +46,7 @@ const BubbleAnimation = () => {
 
   return (
     <>
-      {[...Array(5)].map((_, index) => (
+      {[...Array(7)].map((_, index) => (
         <motion.div
           className="bubble"
           key={index}
