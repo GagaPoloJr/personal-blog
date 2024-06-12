@@ -25,16 +25,19 @@ import {
 const CardSingle = () => {
   const cardBlogSingle = [
     {
+      id: 1,
       title: 'Graphic Design & Video',
       icons: [xdIcon, figmaIcon, psIcon, premierIcon, aeIcon],
       order: 3,
     },
     {
+      id: 2,
       title: 'languages & tools',
       icons: [htmlIcon, cssIcon, jsIcon, tsIcon, phpIcon],
       order: 2,
     },
     {
+      id: 3,
       title: 'Framework & tools',
       icons: [
         vueIcon,
@@ -76,14 +79,17 @@ const CardSingle = () => {
           }}
           className="w-full flex flex-col gap-10"
         >
-          {sortedCardBlogSingle.map(({ title, order, icons }, index) => (
-            <SplideSlide data-order={order} key={index}>
+          {sortedCardBlogSingle.map(({ id, title, order, icons }, index) => (
+            <SplideSlide data-order={order} key={id}>
               <div
                 style={getDynamicStyle(order)}
-                className="flex w-full h-full py-8 md:py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100"
+                className="flex w-full h-full py-8 md:py-16 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-20 border border-gray-100 dark:bg-slate-800 dark:bg-opacity-20 dark:border-gray-500"
               >
                 <div className="w-full text-center grid grid-cols-1 md:grid-cols-2 justify-center items-center gap-5 md:gap-24">
-                  <h3 className="text-lg sm:text-xl font-bold flex-grow-0"> {title} </h3>
+                  <h3 className="text-lg sm:text-xl font-bold flex-grow-0 dark:text-slate-100">
+                    {' '}
+                    {title}{' '}
+                  </h3>
 
                   <div className="flex flex-wrap gap-5 justify-center md:justify-start items-center">
                     {icons.map((icon, index) => (

@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from "@components/toggle/ThemeToggle";
+
 const { pathname } = Astro.url;
 const navigation = [
   {
@@ -32,18 +34,20 @@ function hideHomePath() {
 hideHomePath();
 ---
 
-<div class="navbar-nav w-full mx-auto z-20 flex md:block">
+<div class="navbar-nav  mx-auto z-20 flex md:block">
   <nav class="navbar-bg border-gray-200 mx-auto py-5 rounded-lg">
     <div class="flex justify-between items-center w-auto md:order-1" id="mobile-menu-3">
-      <ul class="flex-row flex space-x-8 mt-0 text-sm font-medium z-20">
+      <ul class="flex-row flex w-full justify-between items-center space-x-8 mt-0 text-sm font-medium z-20">
+        <div class="flex">
         {
           navigation.map(
             ({ title, url, pathName, isShow }) =>
               isShow && (
-                <li>
+                
+                <li>  
                   <a
                     href={url}
-                    class={`hover:text-white text-md font-bold block pl-3 md:pl-0 pr-4 py-1 hover:pl-4 p-0 rounded-xl hover:bg-gradient-to-tr hover:from-violet-300 hover:to-pink-400 transition-all duration-250 ${isActiveNavbar(
+                    class={`hover:text-white text-md font-bold block pl-3 md:pl-0 pr-4 py-1 hover:pl-4 p-0 rounded-xl hover:bg-gradient-to-tr hover:from-violet-300 hover:to-pink-400 transition-all duration-250 dark:text-white ${isActiveNavbar(
                       pathName
                     )}`}
                     aria-current="page"
@@ -51,9 +55,15 @@ hideHomePath();
                     {title}
                   </a>
                 </li>
+            
+
               )
           )
+        </div>
         }
+        <li>
+          <ThemeToggle client:only/>
+        </li>
       </ul>
     </div>
   </nav>
@@ -78,3 +88,10 @@ hideHomePath();
   // Attach the scroll event listener
   window.addEventListener('scroll', handleScroll);
 </script>
+
+
+<style>
+  .navbar-nav{
+    /* margin: 1.5rem; */
+  }
+</style>

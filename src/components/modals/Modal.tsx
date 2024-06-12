@@ -7,7 +7,7 @@ type modalProps = {
 };
 
 const ModalAbout = ({ isOpen, handleCloseModal }: modalProps) => {
-  let timeOutId;
+  let timeOutId: number | undefined;
 
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -38,7 +38,7 @@ const ModalAbout = ({ isOpen, handleCloseModal }: modalProps) => {
             id="defaultModal"
             tabIndex={-1}
             aria-hidden="true"
-            className="fixed top-0 left-0 right-0  flex items-center justify-center h-screen p-10 sm:p-0 transition-all duration-300"
+            className="fixed top-0 left-0 right-0  flex items-center justify-center md:h-screen p-10 sm:p-0 transition-all duration-300"
           >
             <div style={{ zIndex: 9998 }} className="overlay"></div>
             <div style={{ zIndex: 9999 }} className="transform transition-all duration-300">
@@ -67,7 +67,7 @@ const ModalAbout = ({ isOpen, handleCloseModal }: modalProps) => {
                 <div className="w-full m-0 sm:w-2/3 mx-auto bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 border border-gray-100">
                   <div className="wrapper-content" ref={modalRef}>
                     <div className="flex items-start justify-between p-4 rounded-t dark:border-gray-600">
-                      <h3 className="text-2xl font-bold">About Me</h3>
+                      <h3 className="text-2xl font-bold dark:text-slate-100">About Me</h3>
                       <button
                         type="button"
                         onClick={handleCloseModal}
@@ -91,7 +91,7 @@ const ModalAbout = ({ isOpen, handleCloseModal }: modalProps) => {
                       </button>
                     </div>
                     <div className="p-6 space-y-6">
-                      <p className="text-sm leading-relaxed dark:text-gray-400">
+                      <p className="text-sm leading-relaxed dark:text-slate-50">
                         I'm a tech enthusiast who loves bringing websites to life. As a{' '}
                         <b> Frontend Developer </b>, I take pride in crafting web experiences that
                         are not only functional but also visually appealing. I'm fluent in the

@@ -59,12 +59,13 @@ import BubbleAnimation from '@components/Bubble';
     <title>{title}</title>
   </head>
   <body>
-    <Ornament client:load className="ornament-circle-style-1" />
-    <Ornament client:load className="ornament-circle-style-2" />
-    <BubbleAnimation client:load />
-    <div class="main-section">
+    
+    <div class="main-section overflow-x-hidden dark:bg-slate-900">
+      <Ornament client:load className="ornament-circle-style-1" />
+      <Ornament client:load className="ornament-circle-style-2" />
+      <BubbleAnimation client:load />
       <!-- <div class="overlay"></div> -->
-      <!-- <Navbar /> -->
+      <Navbar />
       <slot />
     </div>
   </body>

@@ -16,7 +16,7 @@ const ButtonModal = () => {
       <button
         onClick={handleOpenModal}
         id="buttonModal"
-        className="button-read text-sm px-6 py-2 font-bold text-white rounded-full bg-gradient-to-tr from-violet-300 to-pink-400 hover:opacity-75 transition-all duration-300"
+        className="button-read text-sm px-6 py-2 font-bold text-white rounded-full bg-gradient-to-tr from-violet-300 to-pink-400 hover:opacity-75 transition-all duration-300 dark:from-lime-500 dark:to-lime-700"
       >
         <span className="flex items-center gap-1">Read More</span>
       </button>

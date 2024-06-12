@@ -25,16 +25,16 @@ import { Icon } from "astro-icon";
 import { textFormatter } from "@utils/helper";
 ---
 
-<article class="w-full grid grid-cols-1 sm:grid-cols-2 gap-2">
+<article class="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
   {
     blogList.map(({ title, description }) => (
-      <div class="flex flex-col py-5 justify-between gap-5 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100">
-        <h3 class="text-lg font-bold text-purple-500">
+      <div class="flex flex-col py-5 justify-between gap-5 px-5 bg-gray-200 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30 border border-gray-100 dark:bg-slate-800 dark:bg-opacity-20 dark:border-gray-500">
+        <h3 class="text-lg font-bold text-purple-500 dark:text-lime-400">
           {textFormatter(title, 6)}
         </h3>
-        <p class="text-sm font-light leading-6">{description} </p>
+        <p class="text-sm font-light leading-6 dark:text-slate-100">{description} </p>
         <a
-          class="text-sm font-bold flex items-center gap-1 transition-all  hover:font-extrabold hover:text-purple-500"
+          class="text-sm font-bold flex items-center gap-1 transition-all  hover:font-extrabold hover:text-purple-500 dark:text-slate-300 dark:hover:text-lime-300"
           href="#"
         >
           Read More
